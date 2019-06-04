@@ -34,7 +34,6 @@ namespace LABA_12
             AnimalKeyMammalValue.Remove(mammal.BaseAnimal);
             StringKeyMammalValue.Remove(mammal.BaseAnimal.ToString());
         }
-
         public ClassMammals GetByIndex(int index)
         {
             index -= 1;

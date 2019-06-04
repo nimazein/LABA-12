@@ -1,0 +1,7 @@
+D:\Docs\C#\LABA-12\LABA 12\LABA 12 v2\bin\Debug\LABA 12 v2.exe.config
+D:\Docs\C#\LABA-12\LABA 12\LABA 12 v2\bin\Debug\LABA 12 v2.exe
+D:\Docs\C#\LABA-12\LABA 12\LABA 12 v2\bin\Debug\LABA 12 v2.pdb
+D:\Docs\C#\LABA-12\LABA 12\LABA 12 v2\obj\Debug\LABA 12 v2.csprojAssemblyReference.cache
+D:\Docs\C#\LABA-12\LABA 12\LABA 12 v2\obj\Debug\LABA 12 v2.csproj.CoreCompileInputs.cache
+D:\Docs\C#\LABA-12\LABA 12\LABA 12 v2\obj\Debug\LABA 12 v2.exe
+D:\Docs\C#\LABA-12\LABA 12\LABA 12 v2\obj\Debug\LABA 12 v2.pdb
