@@ -18,9 +18,11 @@ namespace LABA_12_v2
             {
                 size = Convert.ToInt32(Console.ReadLine());
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                Console.WriteLine("Ошибка ввода");
+                Console.WriteLine(e.Message);
+                Console.ReadKey();
+                Environment.Exit(0);
             }
 
             TestCollections collections = new TestCollections(size);
@@ -35,9 +37,11 @@ namespace LABA_12_v2
             {
                 numberOfObjects = Convert.ToInt32(Console.ReadLine());
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                Console.WriteLine("Ошибка ввода");
+                Console.WriteLine(e.Message);
+                Console.ReadKey();
+                Environment.Exit(0);
             }
             if (numberOfObjects > size)
             {
@@ -126,8 +130,6 @@ namespace LABA_12_v2
             string key = collections.StringValue[0];
             collections.ContainsValue(collections.StringKeyMammalValue[key]);
 
-            
-
             Console.WriteLine("Время поиска среднего элемента: ");
             string keyMiddle = collections.StringValue[numberOfObjects / 2];
             collections.ContainsValue(collections.StringKeyMammalValue[keyMiddle]);
@@ -139,14 +141,36 @@ namespace LABA_12_v2
             Console.WriteLine("Время поиска несуществующего элемента: ");
             collections.ContainsValue(new ClassMammals(7,12,5,"Кошка"));
             Console.ReadKey();
+            Console.WriteLine();
 
 
 
+            Console.WriteLine("Демонстрация метода Remove");
+            Random rnd = new Random();
+            int delIdx = rnd.Next(0, numberOfObjects);
+
+            string delKey = collections.StringValue[rnd.Next(delIdx)];
+            collections.Remove(collections.StringKeyMammalValue[delKey]);
+            Console.WriteLine($"Объект с индексом {delIdx} и ключом {delKey} был удален");
+            Console.ReadKey();
+            Console.WriteLine();
 
 
-
-
-
+            Console.WriteLine("Демонстрация работы исключений");
+            Console.Write("Индекс искомого объекта: ");
+            int index = 0;
+            try
+            {
+                index = Convert.ToInt32(Console.ReadLine());
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                Console.ReadKey();
+                Environment.Exit(0);
+            }
+            collections.GetByIndex(index);
+     
         }
     }
 }

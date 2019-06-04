@@ -49,13 +49,14 @@ namespace LABA_12_v2
 
                 Add(new ClassMammals(rndIncubationPeriod, rndLifeExpectancy, rndWeight, name));
             }
-
-
-
         }
 
-        public ClassMammals GetByIndex(int index) // why static?
+        public ClassMammals GetByIndex(int index) 
         {
+            if (index > StringKeyMammalValue.Count)
+                throw new IndexNotFoundException("Данный объект не числится в коллекции");
+
+
             foreach (var el in StringKeyMammalValue)
             {
                 if (GetIndex(el.Value) == index)
@@ -64,10 +65,6 @@ namespace LABA_12_v2
                 }
             }
             return null;           
-        }
-        public static ClassMammals GetIntValueReturnMammal(int gg) // Задани е5
-        {
-            return null;
         }
         private int GetIndex(ClassMammals mammal)
         {
@@ -79,11 +76,7 @@ namespace LABA_12_v2
                     key = el.Key;
                 }
             }
-            if (key == "")
-            {
-                throw new IndexNotFoundException("Данный объект не числится в коллекции");
-            }
-
+            
             int i = 0;
             foreach (string el in StringValue)
             {
